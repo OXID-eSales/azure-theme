@@ -1,0 +1,22 @@
+{
+  "name": "oxid-esales/azure-theme",
+  "description": "This is Azure Theme for OXID eShop.",
+  "type": "oxideshop-theme",
+  "keywords": [
+    "oxid",
+    "themes",
+    "eShop"
+  ],
+  "homepage": "https://www.oxid-esales.com/en/home.html",
+  "license": [
+    "GPL-3.0",
+    "proprietary"
+  ],
+  "minimum-stability": "dev",
+  "extra": {
+    "oxideshop": {
+      "target-directory": "azure",
+      "assets-directory": "out/azure"
+    }
+  }
+}

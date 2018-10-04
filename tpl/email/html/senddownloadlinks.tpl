@@ -16,7 +16,7 @@
         </h3>
     [{/block}]
 
-    [{if $oOrderFileList and $oOrderFileList|count}]
+    [{if $oOrderFileList}]
         [{block name="email_html_senddownloadlinks_download_header"}]
             <h3 style="font-weight: bold; margin: 20px 0 7px; padding: 0; line-height: 35px; font-size: 12px;font-family: Arial, Helvetica, sans-serif; text-transform: uppercase; border-bottom: 4px solid #ddd;">
                 [{oxmultilang ident="MY_DOWNLOADS_DESC"}]

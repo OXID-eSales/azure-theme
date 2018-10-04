@@ -117,7 +117,8 @@
     [{/block}]
 
     [{block name="page_list_listbody"}]
-    [{if $oView->getArticleList()|@count > 0}]
+    [{if $oView->getArticleList()}]
+    [{if $oView->getArticleList()|count}]
         <h1 class="pageHead">[{$oView->getTitle()}]
             [{assign var='rsslinks' value=$oView->getRssLinks()}]
             [{if $rsslinks.activeCategory}]
@@ -139,6 +140,7 @@
         [{* List types: grid|line|infogrid *}]
         [{include file="widget/product/list.tpl" type=$oView->getListDisplayType() listId="productList" products=$oView->getArticleList()}]
         [{include file="widget/locator/listlocator.tpl" locator=$oView->getPageNavigationLimitedBottom() place="bottom"}]
+    [{/if}]
     [{/if}]
     [{/block}]
 [{/capture}]

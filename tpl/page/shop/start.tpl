@@ -14,9 +14,9 @@
         [{/if}]
         [{/foreach}]
     [{/if}]
-    [{if $oView->getBargainArticleList()|@count > 0 || ($promoCatTitle && $promoCatImg)}]
+    [{if ($oView->getBargainArticleList() && $oView->getBargainArticleList()|count) || ($promoCatTitle && $promoCatImg)}]
         <div class="promoBoxes clear">
-            [{if count($oView->getBargainArticleList()) > 0}]
+            [{if $oView->getBargainArticleList()|count}]
                 <div id="specBox" class="specBox">
                     [{include file="widget/product/bargainitems.tpl"}]
                 </div>

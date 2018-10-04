@@ -1,5 +1,6 @@
 [{assign var="iManufacturerLimit" value="20"}]
 [{assign var="manufacturers" value=$oView->getManufacturerlist()}]
+[{if $manufacturers}]
 [{if $manufacturers|count}]
     [{block name="footer_manufacturers"}]
     <dl id="footerManufacturers" class="list manufacturers">
@@ -15,4 +16,5 @@
         [{/foreach}]
     </dl>
     [{/block}]
+[{/if}]
 [{/if}]

@@ -40,7 +40,7 @@
         [{include file="widget/header/search.tpl"}]
     [{/block}]
 </header>
-[{if $oView->getClassName()=='start' && $oView->getBanners()|@count > 0}]
+[{if $oView->getClassName()=='start' && $oView->getBanners()|is_array && !empty($oView->getBanners())}]
     <section class="oxSlider">
         [{include file="widget/promoslider.tpl"}]
     </section>

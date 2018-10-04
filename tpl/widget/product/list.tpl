@@ -19,7 +19,7 @@
         </h2>
     [{/if}]
 [{/if}]
-[{if $products|@count gt 0}]
+[{if $products && !empty($products)}]
     <ul class="[{$type}]View clear" id="[{$listId}]">
         [{assign var="currency" value=$oView->getActCurrency()}]
         [{foreach from=$products item=_product name=productlist}]
@@ -32,4 +32,4 @@
             [{/if}]
         [{/foreach}]
     </ul>
-[{/if}]
+  [{/if}]

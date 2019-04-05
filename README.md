@@ -24,7 +24,7 @@ Log into the admin panel, go to *Extensions → Themes → Azure* and press the 
 
 ## Contributing
 
-The theme is not supported anymore, no releases is planned.
+The theme is not supported anymore, no releases are planned.
 
 ## Bugs and Issues
 

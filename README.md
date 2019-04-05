@@ -3,8 +3,10 @@
 ## General Information
 
 This is Azure Theme for OXID eShop. b-1.4 branch of this repository is compatible with OXID eShop 6.0.
-This theme is **deprecated** and will not be supported in one of the next major OXID eShop versions. For new projects
-please use https://github.com/OXID-eSales/flow_theme/
+
+This theme is **deprecated** and **is not supported anymore**, but still used in internal acceptance tests.
+
+For new projects please use https://github.com/OXID-eSales/flow_theme/
 
 ## Installation
 
@@ -22,7 +24,7 @@ Log into the admin panel, go to *Extensions → Themes → Azure* and press the 
 
 ## Contributing
 
-If you are interested in contributing of some changes, Please read [CONTRIBUTING.md](CONTRIBUTING.md) file for more information.
+The theme is not supported anymore, no releases is planned.
 
 ## Bugs and Issues
 

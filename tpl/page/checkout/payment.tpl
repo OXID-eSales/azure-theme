@@ -15,7 +15,7 @@
                         <input type="hidden" name="cl" value="[{$oViewConf->getActiveClassName()}]">
                         <input type="hidden" name="fnc" value="changeshipping">
                     </div>
-                    <h3 id="deliveryHeader" class="blockHead">[{if $oView->getAllSetsCnt() > 1}][{oxmultilang ident="SELECT_SHIPPING_METHOD" suffix="COLON"}][{else}][{oxmultilang ident="SELECT_SHIPPING_METHOD" suffix="COLON"}][{/if}]</h3>
+                    <h3 id="deliveryHeader" class="blockHead">[{if $oView->getAllSetsCnt() > 1}][{oxmultilang ident="SELECT_SHIPPING_METHOD" suffix="COLON"}][{else}][{oxmultilang ident="SELECTED_SHIPPING_CARRIER" suffix="COLON"}][{/if}]</h3>
                     <ul>
                         <li>
                             [{block name="act_shipping"}]
@@ -98,8 +98,6 @@
                         [{block name="select_payment"}]
                             [{if $sPaymentID == "oxidcashondel"}]
                                 [{include file="page/checkout/inc/payment_oxidcashondel.tpl"}]
-                            [{elseif $sPaymentID == "oxidcreditcard"}]
-                                [{include file="page/checkout/inc/payment_oxidcreditcard.tpl"}]
                             [{elseif $sPaymentID == "oxiddebitnote"}]
                                 [{include file="page/checkout/inc/payment_oxiddebitnote.tpl"}]
                             [{else}]

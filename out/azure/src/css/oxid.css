@@ -5106,45 +5106,6 @@ a.downloadableFile.pending {
     width: 350px;
 }
 
-#betaNote {
-    position:fixed;
-    top:0;
-    left:0;
-    width:100%;
-    z-index:105;
-    font-weight:normal;
-    font-size:16px;
-    color: #fff;
-    background-color:#f77704;
-    opacity: 0.9;
-    filter: alpha(opacity = 90);
-    padding:8px 0 8px 0;
-    text-align: center;
-    border-bottom: 1px solid #d36706;
-    display:none;
-}
-
-#betaNote span.dismiss {
-    cursor:pointer;
-    position: absolute;
-    right: 10px;
-    top: 8px;
-    width: 18px;
-    height: 18px;
-    display: block;
-    text-indent: -9999px;
-    background: url(../../img/close.png) no-repeat 0 0;
-}
-
-#betaNote a {
-    color: #fff;
-    text-decoration:underline;
-    font-weight:bold
-}
-
-#betaNote+#page {
-    padding-top: 35px;
-}
 .hidden {
     display: none;
 }

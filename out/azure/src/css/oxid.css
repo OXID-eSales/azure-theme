@@ -763,16 +763,6 @@ a.viewAllHover,
     padding: 10px;
 }
 
-/* --- News Box ----------------------- */
-#newsBox.box li {
-    padding-top: 7px;
-}
-
-#newsBox.box li:first-child {
-    padding-top: 0;
-}
-
-
 /* --- Article  box & recommendation box --------------------- */
 .featuredList a {
     padding: 7px 10px 5px 10px;

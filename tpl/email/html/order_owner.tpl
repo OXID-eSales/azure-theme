@@ -66,7 +66,8 @@
                                     [{/if}]
                                     [{if $basketitem->getPersParams()}]
                                         [{block name="email_html_order_owner_persparams"}]
-                                            [{foreach key=persParamKey from=$basketitem->getPersParams() item=persParamValue}]
+                                            [{assign var="persParams" value=$basketitem->getPersParams()}]
+                                            [{foreach key=persParamKey from=$persParams item=persParamValue}]
                                                 [{if $oView->showPersParam($persParamKey)}]
                                                     ,&nbsp;<em>
                                                     [{include file="page/persparams/persparam.tpl" count=$persParams|@count key=$persParamKey value=$persParamValue}]

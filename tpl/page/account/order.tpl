@@ -67,7 +67,8 @@
                                         [{$orderitem->oxorderarticles__oxtitle->value}] [{$orderitem->oxorderarticles__oxselvariant->value}] <span class="amount"> - [{$orderitem->oxorderarticles__oxamount->value}] [{oxmultilang ident="QNT"}]</span>
                                     [{if $oArticle->oxarticles__oxid->value && $oArticle->isVisible()}]</a>[{/if}]
                                       [{block name="account_order_persparams"}]
-                                        [{foreach key=persParamKey from=$orderitem->getPersParams() item=persParamValue}]
+                                        [{assign var="persParams" value=$orderitem->getPersParams()}]
+                                        [{foreach key=persParamKey from=$persParams item=persParamValue}]
                                             <br />
                                             [{include file="page/persparams/persparam.tpl" count=$persParams|@count key=$persParamKey value=$persParamValue}]
                                         [{/foreach}]

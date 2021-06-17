@@ -50,4 +50,4 @@
         </ul>
 </article>
 [{/if}]
-[{oxscript widget=$oView->getClassName()}]
+[{oxscript widget=$oView->getClassKey()}]

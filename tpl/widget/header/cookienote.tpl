@@ -10,4 +10,4 @@
     </div>
     [{oxscript add="$('#cookieNote').oxCookieNote();"}]
 [{/if}]
-[{oxscript widget=$oView->getClassName()}]
+[{oxscript widget=$oView->getClassKey()}]

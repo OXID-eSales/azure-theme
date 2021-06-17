@@ -58,4 +58,4 @@
     </div>
 </div>
 [{insert name="oxid_tracker" title="PRODUCT_DETAILS"|oxmultilangassign product=$oDetailsProduct cpath=$oView->getCatTreePath()}]
-[{oxscript widget=$oView->getClassName()}]
+[{oxscript widget=$oView->getClassKey()}]

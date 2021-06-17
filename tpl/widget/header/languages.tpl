@@ -24,4 +24,4 @@
     </div>
 </div>
 [{/if}]
-[{oxscript widget=$oView->getClassName()}]
+[{oxscript widget=$oView->getClassKey()}]

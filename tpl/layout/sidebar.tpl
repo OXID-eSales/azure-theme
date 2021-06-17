@@ -10,13 +10,13 @@
     [{/block}]
 
     [{block name="sidebar_categoriestree"}]
-        [{if $oView->getClassName() != 'start' && $oView->getClassName() != 'compare'}]
+        [{if $oView->getClassKey() != 'start' && $oView->getClassKey() != 'compare'}]
             [{oxid_include_widget cl="oxwCategoryTree" cnid=$oView->getCategoryId() deepLevel=0 noscript=1 nocookie=1}]
         [{/if}]
     [{/block}]
 
     [{block name="sidebar_partners"}]
-        [{if $oView->getClassName() eq "start"}]
+        [{if $oView->getClassKey() eq "start"}]
             [{include file="widget/sidebar/partners.tpl"}]
         [{/if}]
     [{/block}]
@@ -31,7 +31,7 @@
         [{if $oViewConf->getShowListmania() && $oView->getSimilarRecommListIds()}]
             [{oxid_include_widget nocookie=1 cl="oxwRecommendation" aArticleIds=$oView->getSimilarRecommListIds() searchrecomm=$oView->getRecommSearch()}]
         [{elseif $oViewConf->getShowListmania() && $oView->getRecommSearch()}]
-            [{oxid_include_widget nocookie=1 cl="oxwRecommendation" _parent=$oView->getClassName() searchrecomm=$oView->getRecommSearch()}]
+            [{oxid_include_widget nocookie=1 cl="oxwRecommendation" _parent=$oView->getClassKey() searchrecomm=$oView->getRecommSearch()}]
         [{/if}]
     [{/block}]
 
@@ -42,7 +42,7 @@
     [{/block}]
 
     [{block name="sidebar_shopluperatings"}]
-        [{if $oView->getClassName() eq "start"}]
+        [{if $oView->getClassKey() eq "start"}]
            [{include file="widget/shoplupe/ratings.tpl"}]
         [{/if}]
     [{/block}]

@@ -40,6 +40,6 @@
         </a>
     </li>
 </ul>
-[{oxscript widget=$oView->getClassName()}]
+[{oxscript widget=$oView->getClassKey()}]
 
 

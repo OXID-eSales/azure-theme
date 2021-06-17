@@ -63,5 +63,5 @@
         </li>
     [{/if}]
 </ul>
-[{oxscript widget=$oView->getClassName()}]
-[{oxstyle widget=$oView->getClassName()}]
+[{oxscript widget=$oView->getClassKey()}]
+[{oxstyle widget=$oView->getClassKey()}]

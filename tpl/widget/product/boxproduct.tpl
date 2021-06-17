@@ -41,4 +41,4 @@
     </li>
 [{/block}]
 
-[{oxscript widget=$oView->getClassName()}]
+[{oxscript widget=$oView->getClassKey()}]

@@ -82,4 +82,4 @@
     [{/if}]
 
 </div>
-[{oxscript widget=$oView->getClassName()}]
+[{oxscript widget=$oView->getClassKey()}]

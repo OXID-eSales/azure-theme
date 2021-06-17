@@ -1,10 +1,10 @@
 [{if $oViewConf->getTopActionClassName() != 'clearcookies' && $oViewConf->getTopActionClassName() != 'mallstart'}]
-    [{oxid_include_widget cl="oxwCookieNote" _parent=$oView->getClassName() nocookie=1}]
+    [{oxid_include_widget cl="oxwCookieNote" _parent=$oView->getClassKey() nocookie=1}]
 [{/if}]
 <header id="header" class="clear">
     [{block name="layout_header_top"}]
-        [{oxid_include_widget cl="oxwLanguageList" lang=$oViewConf->getActLanguageId() _parent=$oView->getClassName() nocookie=1 _navurlparams=$oViewConf->getNavUrlParams() anid=$oViewConf->getActArticleId()}]
-        [{oxid_include_widget cl="oxwCurrencyList" cur=$oViewConf->getActCurrency() _parent=$oView->getClassName() nocookie=1 _navurlparams=$oViewConf->getNavUrlParams() anid=$oViewConf->getActArticleId()}]
+        [{oxid_include_widget cl="oxwLanguageList" lang=$oViewConf->getActLanguageId() _parent=$oView->getClassKey() nocookie=1 _navurlparams=$oViewConf->getNavUrlParams() anid=$oViewConf->getActArticleId()}]
+        [{oxid_include_widget cl="oxwCurrencyList" cur=$oViewConf->getActCurrency() _parent=$oView->getClassKey() nocookie=1 _navurlparams=$oViewConf->getNavUrlParams() anid=$oViewConf->getActArticleId()}]
 
         [{if $oxcmp_user || $oView->getCompareItemCount() || $Errors.loginBoxErrors}]
             [{assign var="blAnon" value=0}]
@@ -13,7 +13,7 @@
             [{assign var="blAnon" value=1}]
         [{/if}]
 
-        [{oxid_include_widget cl="oxwServiceMenu" _parent=$oView->getClassName() force_sid=$force_sid nocookie=$blAnon _navurlparams=$oViewConf->getNavUrlParams() anid=$oViewConf->getActArticleId()}]
+        [{oxid_include_widget cl="oxwServiceMenu" _parent=$oView->getClassKey() force_sid=$force_sid nocookie=$blAnon _navurlparams=$oViewConf->getNavUrlParams() anid=$oViewConf->getActArticleId()}]
     [{/block}]
 
     [{block name="layout_header_logo"}]
@@ -23,7 +23,7 @@
                     alt="[{$oxcmp_shop->oxshops__oxtitleprefix->value}]"></a>
     [{/block}]
     [{block name="layout_header_bottom"}]
-        [{oxid_include_widget cl="oxwCategoryTree" cnid=$oView->getCategoryId() sWidgetType="header" _parent=$oView->getClassName() nocookie=1}]
+        [{oxid_include_widget cl="oxwCategoryTree" cnid=$oView->getCategoryId() sWidgetType="header" _parent=$oView->getClassKey() nocookie=1}]
 
         [{if $oxcmp_basket->getProductsCount()}]
             [{assign var="blAnon" value=0}]
@@ -37,7 +37,7 @@
         [{include file="widget/header/search.tpl"}]
     [{/block}]
 </header>
-[{if $oView->getClassName()=='start' && $oView->getBanners() && !empty($oView->getBanners())}]
+[{if $oView->getClassKey()=='start' && $oView->getBanners() && !empty($oView->getBanners())}]
     <section class="oxSlider">
         [{include file="widget/promoslider.tpl"}]
     </section>

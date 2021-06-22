@@ -1,7 +1,6 @@
 [{assign var="shop"      value=$oEmailView->getShop()}]
 [{assign var="oView"     value=$oEmailView->getView()}]
 [{assign var="oViewConf" value=$oEmailView->getViewConfig()}]
-[{assign var="oConf"     value=$oViewConf->getConfig()}]
 [{assign var="currency"  value=$oEmailView->getCurrency()}]
 [{assign var="user"      value=$oEmailView->getUser()}]
 [{assign var="oDelSet"   value=$order->getDelSet()}]
@@ -145,7 +144,7 @@
                     </td>
                     [{if $blShowReviewLink}]
                     <td style="padding: 5px; border-bottom: 4px solid #ddd;">
-                        <a href="[{$oConf->getShopURL()}]index.php?shp=[{$shop->oxshops__oxid->value}]&amp;anid=[{$basketitem->getProductId()}]&amp;cl=review&amp;reviewuserhash=[{$user->getReviewUserHash($user->getId())}]" style="font-family: Arial, Helvetica, sans-serif; font-size: 12px;" target="_blank">[{oxmultilang ident="REVIEW"}]</a>
+                        <a href="[{$shopUrl}]index.php?shp=[{$shop->oxshops__oxid->value}]&amp;anid=[{$basketitem->getProductId()}]&amp;cl=review&amp;reviewuserhash=[{$user->getReviewUserHash($user->getId())}]" style="font-family: Arial, Helvetica, sans-serif; font-size: 12px;" target="_blank">[{oxmultilang ident="REVIEW"}]</a>
                     </td>
                     [{/if}]
                 </tr>

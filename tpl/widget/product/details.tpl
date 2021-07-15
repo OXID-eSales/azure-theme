@@ -7,12 +7,7 @@
 [{assign var="shop_name" value=$oxcmp_shop->oxshops__oxname->value}]
 [{assign var="bid_price" value=$oView->getBidPrice()}]
 [{assign var="currency_sign" value=$currency->sign}]
-[{assign_adv var="message_vars" value="array
-    (
-     '0' => '$shop_name',
-     '1' => '$bid_price',
-     '2' => '$currency_sign'
-    )"}]
+[{assign var="message_vars" value='|del|'|explode:"$shop_name|del|$bid_price|del|$currency_sign"}]
 [{assign var="_statusMessage" value="PRICE_ALERT_THANK_YOU_MESSAGE"|oxmultilangassign:$message_vars}]
 [{include file="message/success.tpl" statusMessage=`$_statusMessage`}]
 [{elseif $oView->getPriceAlarmStatus() == 2}]

@@ -168,7 +168,3 @@ div.anythingSlider .arrow {
 .box h3, .sectionHead, .specBox h3 {
     z-index: auto;
 }
-
-.specBox .rss span {
-    right: -188px;
-}

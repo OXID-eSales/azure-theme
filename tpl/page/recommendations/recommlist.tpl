@@ -2,21 +2,11 @@
 [{capture append="oxidBlock_content"}]
     [{if $oView->getActiveRecommList()}]
         [{assign var="_actvrecommlist" value=$oView->getActiveRecommList()}]
-        [{assign var="rsslinks" value=$oView->getRssLinks()}]
         [{if $oxcmp_user}]
             [{assign var="force_sid" value=$oView->getSidForWidget()}]
         [{/if}]
 
         <h1 class="pageHead">[{$oView->getTitle()}]
-
-        [{assign var='rsslinks' value=$oView->getRssLinks()}]
-
-        [{if $rsslinks.recommlistarts}]
-            <a class="rss js-external" id="rssRecommListProducts" href="[{$rsslinks.recommlistarts.link}]" title="[{$rsslinks.recommlistarts.title}]">
-                <img src="[{$oViewConf->getImageUrl('rss.png')}]" alt="[{$rsslinks.recommlistarts.title}]">
-                <span class="FXgradOrange corners glowShadow">[{$rsslinks.recommlistarts.title}]</span>
-            </a>
-        [{/if}]
 
         </h1>
         <div class="listRefine clear bottomRound">

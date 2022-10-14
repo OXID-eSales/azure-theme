@@ -878,22 +878,6 @@ a.viewAllHover,
     padding-right: 10px;
 }
 
-.specBox .rss {
-    position: absolute;
-    right: 10px;
-    top: 10px;
-    text-decoration: none;
-}
-
-.specBox .rss span {
-    visibility: hidden;
-    white-space: nowrap;
-    right: -198px;
-    color: #fff;
-    padding: 5px 8px 0 30px;
-    height: 22px;
-}
-
 .specBox .deliveryInfo {
     display: block;
     font-size: 11px;
@@ -1170,38 +1154,6 @@ a.viewAllHover span {
 /* --- underlined links in login page ---------------- */
 a.textLink {
     text-decoration: underline;
-}
-
-/* --- RSS link ----------------------------- */
-a.rss {
-    text-decoration:none;
-    float: right;
-    height:16px;
-    margin:1px 0;
-    position: relative;
-}
-
-a.rss img {
-    position: relative;
-    z-index: 11;
-}
-
-a.rss span {
-    visibility: hidden;
-    display: block;
-    position: absolute;
-    white-space: nowrap;
-    right: -6px;
-    font-size: 12px;
-    top: -5px;
-    color: #fff;
-    padding: 5px 30px 0 8px;
-    height: 21px;
-    z-index: 5;
-}
-
-a.rss:hover span {
-    visibility: visible;
 }
 
 h3.lightHead {

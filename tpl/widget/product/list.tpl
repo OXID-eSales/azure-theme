@@ -13,9 +13,6 @@
     [{else}]
         <h2 class="sectionHead clear">
             <span>[{$head}]</span>
-            [{if $rsslink}]
-                    <a class="rss js-external" id="[{$rssId}]" href="[{$rsslink.link}]" title="[{$rsslink.title}]"><img src="[{$oViewConf->getImageUrl('rss.png')}]" alt="[{$rsslink.title}]"><span class="FXgradOrange corners glowShadow">[{$rsslink.title}]</span></a>
-            [{/if}]
         </h2>
     [{/if}]
 [{/if}]

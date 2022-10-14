@@ -228,21 +228,8 @@ a.viewAllHover span {
     right: -3px;
 }
 
-
 .specBox h3 {
     zoom: 1;
-}
-
-.specBox .rss {
-    text-decoration: none;
-}
-
-.specBox .rss span {
-    right: -188px;
-}
-
-a.rss:hover {
-    text-decoration: none;
 }
 
 #sidebar .tree li.exp>a>i span, #sidebar .tree li.active>a>i span {

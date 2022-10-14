@@ -119,22 +119,8 @@
     [{block name="page_list_listbody"}]
     [{if $oView->getArticleList()}]
     [{if $oView->getArticleList()|count}]
-        <h1 class="pageHead">[{$oView->getTitle()}]
-            [{assign var='rsslinks' value=$oView->getRssLinks()}]
-            [{if $rsslinks.activeCategory}]
-                <a class="rss js-external" id="rssActiveCategory" href="[{$rsslinks.activeCategory.link}]" title="[{$rsslinks.activeCategory.title}]"><img src="[{$oViewConf->getImageUrl('rss.png')}]" alt="[{$rsslinks.activeCategory.title}]"><span class="FXgradOrange corners glowShadow">[{$rsslinks.activeCategory.title}]</span></a>
-            [{/if}]
-        </h1>
+        <h1 class="pageHead">[{$oView->getTitle()}]</h1>
         <div class="listRefine clear bottomRound">
-        [{* uncomment if want to use descriptions in locator
-           [{if $actCategory && $actCategory->getShortDescription()}]
-                <div id="catDescLocator" class="categoryDescription">[{$actCategory->getShortDescription()}]</div>
-            [{/if}]
-
-            [{if $actCategory->oxcategories__oxlongdesc->value}]
-                <div id="catLongDescLocator" class="categoryDescription">[{oxeval var=$actCategory->oxcategories__oxlongdesc}]</div>
-            [{/if}]
-        *}]
             [{include file="widget/locator/listlocator.tpl" locator=$oView->getPageNavigationLimitedTop() attributes=$oView->getAttributes() listDisplayType=true itemsPerPage=true sort=true}]
         </div>
         [{* List types: grid|line|infogrid *}]

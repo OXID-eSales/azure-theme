@@ -1,12 +1,7 @@
 [{oxscript add="$('a.js-external').attr('target', '_blank');"}]
 [{capture append="oxidBlock_content"}]
-[{assign var='rsslinks' value=$oView->getRssLinks()}]
 
-  <h1 class="pageHead">[{$oView->getTitle()}]
-      [{if $rsslinks.searchArticles}]
-          <a class="rss js-external" id="rssSearchProducts" href="[{$rsslinks.searchArticles.link}]" title="[{$rsslinks.searchArticles.title}]"><img src="[{$oViewConf->getImageUrl('rss.png')}]" alt="[{$rsslinks.searchArticles.title}]"><span class="FXgradOrange corners glowShadow">[{$rsslinks.searchArticles.title}]</span></a>
-      [{/if}]
-  </h1>
+  <h1 class="pageHead">[{$oView->getTitle()}]</h1>
   [{block name="search_results"}]
   [{if $oView->getArticleCount()}]
     <div class="listRefine clear bottomRound">
